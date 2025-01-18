@@ -92,4 +92,12 @@ M.is_full_height_vsplit = function(winid)
   return false
 end
 
+---Limit the value to a range between a minimum and maximum
+---@param min integer
+---@param val integer
+---@param max integer
+M.clamp = function(min, val, max)
+  return math.max(min, math.min(val, max))
+end
+
 return M
